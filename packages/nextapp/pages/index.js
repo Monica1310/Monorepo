@@ -8,18 +8,14 @@ const { SharedStateProvider } = dynamic(async () => {
 
 const Header = dynamic(() => import("react2/Header"));
 
-// import {HomeApp} from "./HomeApp";
+import {HomeApp} from "./HomeApp";
 
 export default function Home() {
   return (
     <>
-    {/* <Header/> */}
-    
-        {/* <SharedStateProvider> */}
-          {/* <HomeApp /> */}
-          <h1>hello</h1>
-        {/* </SharedStateProvider> */}
-    
+      <SharedStateProvider>
+        <HomeApp />
+      </SharedStateProvider>
     </>
   );
 }
